@@ -3,13 +3,19 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Doggie Daycare</title>
+<link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
+    <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 </head>
 <body>
-	<h1>Welcome to Our App!</h1>
-	<p>You are a:</p>
-	<a href="pickarole?choice=client">client</a> <br/>
-	<a href="pickarole?choice=employee">employee</a>
-	
-
+	<div class="container text-center">
+		<h1>Welcome to Doggie Daycare App!</h1>
+		<p>Please sign in:</p>
+		<form th:object="${user}" action = "${/signIn/{id}(id=${user.id})}" method = "post">
+			User Name:<input type="text" name = "username" size="20" th:field="*{username}"> <br />
+			Password:<input type = "text" name = "password" size="20" th:field="*{password}"> <br />
+			<input name="submit" type = "submit" value = "Sign In">
+		</form>
+	</div>
 </body>
 </html>
