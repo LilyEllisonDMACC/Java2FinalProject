@@ -22,9 +22,9 @@ public class RoleController {
 		if(theChoice == null) {
 			return "index";
 		} else if(theChoice.equals("employee")) {
-			return "employee_landing";
+			return "employee_login";
 		}else {
-			return "client_landing";
+			return "client_login";
 		}
 		
 	}

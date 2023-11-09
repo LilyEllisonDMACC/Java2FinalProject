@@ -26,8 +26,10 @@ public class PageController {
 			return "prices_list";
 		}else if(theChoice.equals("contact")){
 			return "contact_us";
-		}else {
+		}else if(theChoice.equals("register")) {
 			return "register_client";
+		} else {
+			return "index";
 		}
 		
 	}
