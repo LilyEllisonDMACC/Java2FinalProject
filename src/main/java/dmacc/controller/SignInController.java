@@ -16,23 +16,18 @@ import org.springframework.web.bind.annotation.RequestParam;
  * Nov 9, 2023
  */
 @Controller
-public class PageController {
+public class SignInController {
 
-	@GetMapping("/changepage")
-	public String changepage (@RequestParam(name="choice", required=false)String theChoice, Model model) {
+	@GetMapping("/signin")
+	public String signin (@RequestParam(name="choice", required=false)String theChoice, Model model) {
 		if(theChoice == null) {
 			return "index";
-		} else if(theChoice.equals("prices")) {
-			return "prices_list";
-		}else if(theChoice.equals("contact")){
-			return "contact_us";
-		}else if(theChoice.equals("register")) {
-			return "register_client";
+		} else if(theChoice.equals("client")) {
+			return "client_landing";
+		
 		} else {
-			return "index";
+			return "employee_landing";
 		}
 		
 	}
-	
-	
 }
