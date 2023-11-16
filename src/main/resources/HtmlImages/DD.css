@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap');
+
+header {
+  margin: 30px;
+  background-color: #5f84A0;
+  padding: 35px;
+  outline: 6px solid #A07B5F;
+  outline-style: inset;
+  color: white;
+}
+
+section {
+  background-color: #001514;
+  padding: 50px 0;
+}
+
+footer {
+  background-color: #5f84A0;
+  text-align: center;
+  padding: 3px;
+  color: #fbfffe;
+}
+
+[class^='col-md-4'] {
+  outline: 3px solid gray;
+  outline-style: groove;
+  padding-top: 5px;
+}
+
+.row {
+  outline: 5px solid gray;
+}
+
+.container {
+  outline: 6px solid #A07B5F;
+  padding: 10px;
+  outline-style: inset;
+  text-align: center;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  color: #fbfffe;
+  
+}
+.containerM {
+  outline: 6px solid gray;
+  outline-style: inset;
+  padding: 10px;
+}
+/*
+[class^='col-md-12'] {
+  text-align: center;
+}
+h4{
+  text-align: center;
+}
+.alert{
+  margin: 15px 270px;
+
+}
+.progress{
+  margin: 0px 50px;
+}
+.BOP :link{
+ color: #fbfffe;
+}
+.BOP :visited{
+  color: #fbfffe;
+ }
+ .BOP :hover{
+  color: #fbfffe;
+ }
+ footer .Bop {
+  background-color: #490302;
+  text-align: center;
+  padding: 3px;
+  color: #fbfffe;
+}
+ p{
+font-size: larger;
+ }
+
+ h4::first-line {
+  text-transform: uppercase;
+  text-decoration: #6b0504;
+ }
+ .Bop {
+  font-size: larger;
+ }
+ h1{
+  font-family: Cormorant Garamond, Helvetica, sans-serif;
+ }
+ /*
