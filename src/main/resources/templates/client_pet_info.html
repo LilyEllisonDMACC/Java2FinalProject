@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>Client and Pet Info</h1>
+
+<form>
+		<table>
+			<tr th:each="currentClient : ${clients}" >
+				<td th:text="${currentClient.id}" />
+				<td th:text="${currentClient.name}" />
+				<td th:text="${currentClient.contactInfo}" />
+				
+				<td><a th:href="@{/edit/{id}(id=${currentClient.id})}">Edit</a></td>
+				<td><a th:href="@{/delete/{id}(id=${currentClient.id})}">Delete</a></td>
+			</tr>
+		</table>
+	</form>
+	
+
+</body>
+</html>
