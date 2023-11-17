@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>View My Pets</title>
+</head>
+<body>
+    <h1>My Pet Info:</h1>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Breed</th>
+            <th>Age</th>
+            <th>Status</th>
+        </tr>
+        <th:block th:each="pet : ${pets}">
+            <tr>
+                <td th:text="${pet.name}">Pet Name</td>
+                <td th:text="${pet.breed}">Pet Breed</td>
+                <td th:text="${pet.age}">Pet Age</td>
+                <td th:text="${pet.status}">Pet Status</td>
+            </tr>
+        </th:block>
+    </table>
+    
+    <br>
+    <a href="/">Return to Home</a>
+</body>
+</html>

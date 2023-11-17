@@ -26,7 +26,7 @@ public class Pet {
     private int age;
     
 	@ManyToOne
-    @JoinColumn(name = "owner_id")
+    @JoinColumn(name = "client_id")
     private Client owner;
 	
     public Pet() {
