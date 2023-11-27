@@ -18,6 +18,7 @@ public class Client {
 
     private String name;
     private String contactInfo;
+    private String password;
 
     @OneToMany(mappedBy = "owner")
     private List<Pet> pets;
@@ -26,10 +27,17 @@ public class Client {
     	super();
     }
     
-    public Client(Long id, String name, String contactInfo, List<Pet> pets) {
+    public Client(String name, String contactInfo, String password) {
+    	this.name = name;
+    	this.contactInfo = contactInfo;
+    	this.password = password;
+    }
+    
+    public Client(Long id, String name, String contactInfo, String password, List<Pet> pets) {
     	this.client_id = id;
     	this.name = name;
     	this.contactInfo = contactInfo;
+    	this.password = password;
     	this.pets = pets;
     }
 
@@ -63,5 +71,13 @@ public class Client {
 
 	public void setPets(List<Pet> pets) {
 		this.pets = pets;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
 	}
 }

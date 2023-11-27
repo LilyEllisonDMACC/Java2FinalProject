@@ -10,6 +10,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import dmacc.model.Client;
+
 /**
  * @author LILY ELLISON - LBELLISON
  * CIS175 - FALL 2023
@@ -27,6 +29,8 @@ public class PageController {
 		}else if(theChoice.equals("contact")){
 			return "contact_us";
 		}else if(theChoice.equals("register")) {
+			Client c = new Client();
+			model.addAttribute("newClient", c);
 			return "register_client";
 		} else {
 			return "index";
