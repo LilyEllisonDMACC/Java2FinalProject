@@ -14,5 +14,12 @@
 </head>
 <body>
 <h1>Search for Client</h1>
+<h2>Search by Client Name:</h2>
+<form th:object="${searchClient}" th:action="@{/searchclientname/{id} (id=${searchClient.name})}" method="post">
+	Name: <input type="text" name="searchName" th:field="*{name}">
+	<input type="submit" value="submit" name="Submit">
+	
+</form>
+
 </body>
 </html>

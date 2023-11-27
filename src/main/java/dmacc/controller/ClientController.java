@@ -15,11 +15,15 @@ public class ClientController {
 	ClientRepository repo;
 	// this can be moved to another controller if anyone sees the need to
 	
-
+	@PostMapping("/searchclientname")
+	public String findClientName(String n, Model model) {
+		
+	}
 	
-	@PostMapping("/client/")
+	@PostMapping("/newclient/")
 	public String reviseClient(Client c, Model model) {
 		repo.save(c);
-		return "client_landing";
+		model.addAttribute("clientAdded", c);
+		return "post_registration";
 	}
 }

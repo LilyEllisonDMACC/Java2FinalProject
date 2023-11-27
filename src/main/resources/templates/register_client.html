@@ -72,7 +72,7 @@
     </p>
 	
 	<p>Registration Form goes here</p>
-	<form th:object="${newClient}" th:action="@{/client/{id}(id=${newClient.id})}" method="post">
+	<form th:object="${newClient}" th:action="@{/newclient/{id}(id=${newClient.id})}" method="post">
 		Name: <input type="text" name="clientName" th:field="*{name}">
 		ContactInfo: <input type="text" name="clientContact" th:field="*{contactInfo}">
 		Password: <input type="text" name="clientPassword" th:field="*{password}">
