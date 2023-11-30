@@ -48,13 +48,13 @@ public class EmployeeOptsController {
 		return "";
 	}
 	
-	@GetMapping("viewAllClientPet")
-	public String showAllClientPet(Model model) {
+	@GetMapping("viewAllClient")
+	public String showAllClient(Model model) {
 		if(clientRepo.findAll().isEmpty()) {
 			return addNewClient(model);
 		}
 		model.addAttribute("clients", clientRepo.findAll());
-		return "client_pet_info";
+		return "client_list";
 	}
 	
 	@GetMapping("viewAllPets")
@@ -86,7 +86,7 @@ public class EmployeeOptsController {
 	@PostMapping("/addClient")
 	public String addNewClient(@ModelAttribute Client c, Model model) {
 		clientRepo.save(c);
-		return showAllClientPet(model);
+		return showAllClient(model);
 	}
 	
 	@GetMapping("addPet")
