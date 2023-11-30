@@ -46,6 +46,18 @@ footer {
   outline-style: inset;
   padding: 10px;
 }
+
+tr.title th {
+	padding-inline-start: 25px;
+}
+
+form {
+	margin: 20px;
+}
+
+.options {
+	margin-right: 10px;
+}
 /*
 [class^='col-md-12'] {
   text-align: center;
