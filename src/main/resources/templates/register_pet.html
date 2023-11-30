@@ -13,7 +13,7 @@
 	<header>
     	<a id="Top"></a>
         <div class="container">
-            <img src="" class="img-thumbnail" alt="Picure of Dog for viewers" width="50%" height="50%">
+           <!-- <img src="" class="img-thumbnail" alt="Picure of Dog for viewers" width="50%" height="50%">-->
             <h1>Java Doggie Registration!</h1>
 		</div>
     </header>
@@ -74,7 +74,12 @@
 
 	<h1>New Pet Register</h1>
 	
-	<p>Pet Registration Form goes here</p>
+	  <form th:object="${newPet}" th:action="@{/newPet/{id}(id=${newPet.id})}" method="post">
+		Name: <input type="text" name="PetName" th:field="*{name}">
+		Breed: <input type="text" name="petBreed" th:field="*{breed}">
+		Age: <input type="text" name="petAge" th:field="*{age}">
+		<input type="submit" value="Submit" name="Submit">
+	</form>
 
 </body>
 </html>
