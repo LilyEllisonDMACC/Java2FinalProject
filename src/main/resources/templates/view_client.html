@@ -20,14 +20,14 @@
     
     	<table>
 		<tr>
-			
+			<th>ID	</th>
 			<th>Name	</th>
 			<th>Contact Info	</th>
 			<th>Password	</th>
 		</tr>
 		<th:block>
 			<tr>
-				
+				<td th:text="${clientSelected.id}">Client ID</td>
 				<td th:text="${clientSelected.name}">Client Name</td>
 				<td th:text="${clientSelected.contactInfo}">Client Contact Info</td>
 				<td th:text="${clientSelected.password}">Client Password</td>

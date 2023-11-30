@@ -34,4 +34,27 @@ public class ClientController {
 		model.addAttribute("clientSelected", c);
 		return "view_client";
 	}
+	
+	@GetMapping("editClient/{id}")
+	public String editClientInfo(@PathVariable("id") long id, Model model) {
+		Client c = repo.findById(id).orElse(null);
+		model.addAttribute("editClient", c);
+		return "edit_client";
+	}
+	
+	@PostMapping("/updateClient/{id}")
+	public String updateClient(Client c, Model model) {
+		repo.save(c);
+		model.addAttribute("clientAdded", c);
+		return "post_registration";
+	}
+	
+	@GetMapping("/deleteClient/{id}")
+	public String deleteClientAcct(@PathVariable("id") long id, Model model) {
+		Client c = repo.findById(id).orElse(null);
+		repo.delete(c);
+		return "client_list";
+	}
+	
+	
 }
