@@ -2,7 +2,9 @@ package dmacc.model;
 
 import java.util.List;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -20,7 +22,7 @@ public class Client {
     private String contactInfo;
     private String password;
 
-    @OneToMany(mappedBy = "owner")
+    @OneToMany(mappedBy = "client", fetch=FetchType.EAGER, cascade=CascadeType.ALL)
     private List<Pet> pets;
     
     public Client() {

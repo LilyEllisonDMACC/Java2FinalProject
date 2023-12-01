@@ -7,6 +7,7 @@
 package dmacc.model;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -25,9 +26,9 @@ public class Pet {
     private String breed;
     private int age;
     
-	@ManyToOne
+	@ManyToOne(fetch=FetchType.LAZY)
     @JoinColumn(name = "client_id")
-    private Client owner;
+    private Client client;
 	
     public Pet() {
     	super();
@@ -40,12 +41,12 @@ public class Pet {
     	this.age = age;
     }
     
-    public Pet(Long id, String name, String breed, int age, Client owner) {
+    public Pet(Long id, String name, String breed, int age, Client client) {
     	this.id = id;
     	this.name = name;
     	this.breed = breed;
     	this.age = age;
-    	this.owner = owner;
+    	this.client = client;
     }
     
     
@@ -81,12 +82,12 @@ public class Pet {
 		this.age = age;
 	}
 
-	public Client getOwner() {
-		return owner;
+	public Client getclient() {
+		return client;
 	}
 
-	public void setOwner(Client owner) {
-		this.owner = owner;
+	public void setclient(Client client) {
+		this.client = client;
 	}
 
 
