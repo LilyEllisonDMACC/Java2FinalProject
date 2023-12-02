@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	
+		<table>
+		<tr>
+			
+			<th>Name	</th>
+			<th>Breed	</th>
+			<th>Age	</th>
+			<th>Owner </th>
+		</tr>
+		<th:block>
+			<tr>
+				
+				<td th:text="${selectPet.name}">Pet Name</td>
+				<td th:text="${selectPet.breed}">Pet Breed</td>
+				<td th:text="${selectPet.age}">Pet Age</td>
+				<td th:text="${selectPet.getclient().getName()}">Owner's Name</td>
+				
+			</tr>
+		</th:block>
+	</table>
+	
+		<!--<table>
+		<tr>
+			
+			<th>Name	</th>
+			<th>Contact Info	</th>
+			<th>Pet Name	</th>
+			<th>Pet Breed	</th>
+			<th>Pet Age	</th>
+			
+		</tr>
+		<th:block>
+			<tr>
+				
+				<td th:text="${selectClient.name}">Client Name</td>
+				<td th:text="${selectClient.contactInfo}">Client Contact Info</td>
+				<td th:text="${selectClient.pets}">Client Pets</td>
+			</tr>
+		</th:block>
+	</table>-->
+
+</body>
+</html>
