@@ -1,11 +1,14 @@
 package dmacc.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import dmacc.model.Client;
 import dmacc.repository.ClientRepository;
@@ -56,5 +59,12 @@ public class ClientController {
 		return "client_list";
 	}
 	
+    @GetMapping("/searchClientByName")
+    public String searchClientByName(@RequestParam("name") String name, Model model) {
+        List<Client> clients = repo.findByName(name);
+        model.addAttribute("clients", clients);
+        return "client_search_results"; 
+    }
+    
 	
 }
