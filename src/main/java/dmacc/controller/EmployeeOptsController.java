@@ -5,6 +5,10 @@
  */
 package dmacc.controller;
 
+
+
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -73,7 +77,11 @@ public class EmployeeOptsController {
 	
 	@GetMapping("searchClient")
 	public String findClient(Model model) {
-		return "";
+//		if(clientRepo.findAll().isEmpty()) {
+//			return addNewClient(model);
+//		}
+//		model.addAttribute("clients", clientRepo.findAll());
+		return "find_client";
 	}
 	
 	@GetMapping("addClient")
@@ -101,5 +109,7 @@ public class EmployeeOptsController {
 		petRepo.save(p);
 		return showAllPets(model);
 	}
+
+    
 	
 }
