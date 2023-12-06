@@ -65,7 +65,10 @@ public class EmployeeOptsController {
 	public String showAllPets(Model model) {
 		if(petRepo.findAll().isEmpty()) {
 			return addNewPet(model);
+		} else if(clientRepo.findAll().isEmpty()) {
+			return addNewClient(model);
 		}
+		
 		model.addAttribute("pets", petRepo.findAll());
 		return "pet_list";
 	}
