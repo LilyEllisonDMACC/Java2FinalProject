@@ -14,7 +14,9 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
+import lombok.Data;
 
+@Data
 
 @Entity
 @Table(name = "pet", schema = "doggiedaycare")
@@ -25,6 +27,7 @@ public class Pet {
     private String name;
     private String breed;
     private int age;
+    private String status;
     
 	@ManyToOne(fetch=FetchType.LAZY)
     @JoinColumn(name = "client_id")
@@ -32,6 +35,7 @@ public class Pet {
 	
     public Pet() {
     	super();
+    	this.status = "unknown";
     }
     
     public Pet(Long id, String name, String breed, int age) {
@@ -39,6 +43,7 @@ public class Pet {
     	this.name = name;
     	this.breed = breed;
     	this.age = age;
+    	this.status = "unknown";
     }
     
     public Pet(Long id, String name, String breed, int age, Client client) {
@@ -47,6 +52,7 @@ public class Pet {
     	this.breed = breed;
     	this.age = age;
     	this.client = client;
+    	this.status = "unknown";
     }
     
     
