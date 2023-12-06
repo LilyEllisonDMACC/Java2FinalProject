@@ -67,7 +67,7 @@ public class EmployeeOptsController {
 			return addNewPet(model);
 		}
 		model.addAttribute("pets", petRepo.findAll());
-		return "pet_info";
+		return "pet_list";
 	}
 	
 	@GetMapping("searchPet")
