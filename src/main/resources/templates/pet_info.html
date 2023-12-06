@@ -12,11 +12,20 @@
 
 <form>
 		<table>
+			<tr class="title">
+				<th>ID	</th>
+				<th>Name	</th>
+				<th>Breed	</th>
+				<th>Age		</tr>
+				<th>Client Name</th>
+				
+			</tr>
 			<tr th:each="currentPet : ${pets}" >
 				<td th:text="${currentPet.id}" />
 				<td th:text="${currentPet.name}" />
 				<td th:text="${currentPet.breed}" />
 				<td th:text="${currentPet.age}" />
+				<td th:text="${currentPet.getclient().getName()}" />
 				
 				<td><a th:href="@{/edit/{id}(id=${currentPet.id})}">Edit</a></td>
 				<td><a th:href="@{/delete/{id}(id=${currentPet.id})}">Delete</a></td>

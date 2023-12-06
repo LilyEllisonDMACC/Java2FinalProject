@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<header>
+    	<a id="Top"></a>
+		<h1>Registry Updated!</h1>
+    </header>
+
+
+	<h2>Thank you for registering with Doggie Daycare!</h2>
+	<p>The following pet information has been added to our system:</p>
+	
+	<table>
+		<tr>
+			
+			<th>Name	</th>
+			<th>Breed	</th>
+			<th>Age	</th>
+		</tr>
+		<th:block>
+			<tr>
+				
+				<td th:text="${petAdded.name}">Pet Name</td>
+				<td th:text="${petAdded.breed}">Pet Breed</td>
+				<td th:text="${petAdded.age}">Pet Age</td>
+				
+			</tr>
+		</th:block>
+		
+	</table>
+	<h2>Add to a Client Account:</h2>
+	
+				<table>
+			<tr class="title">
+				<th>ID	</th>
+				<th>Name	</th>
+				<th>Contact Info	</th>
+				
+			</tr>
+			<th:block>
+			<tr th:each="currentClient : ${clients}" >
+				<td th:text="${currentClient.id}" />
+				<td th:text="${currentClient.name}" />
+				<td th:text="${currentClient.contactInfo}" />
+				
+				<td ><a th:href="@{/addClientToPet/{clientid}/{petid}(clientid=${currentClient.id}, petid=${petAdded.id})}">Add This Account</a></td>
+			
+			</tr>
+			</th:block>
+			</table>
+		
+<!--
+	<h3>What would you like to do now?</h3>
+	<p>
+		
+		<a href="../pickarole?choice=client">Sign in as a Client</a> <br/>
+		<a href="../pickarole?choice=employee">Sign in as an Employee</a> <br>
+		<a href="../changepage?choice=index">Return to Home Page</a><br>
+		<a href="../changepage?choice=petregister">Register Another New Pet Account</a><br>
+	</p>
+-->
+	
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<p>
+	<a href="../../signin?choice=employee">Return to Employee Landing Page</a><br>
+	
+	<a href="../../changepage?choice=index">Return to Home Page</a><br>
+	</p>
+		<table>
+		<tr>
+			
+			<th>Name	</th>
+			<th>Breed	</th>
+			<th>Age	</th>
+			<th>Added to Owner: </th>
+		</tr>
+		<th:block>
+			<tr>
+				
+				<td th:text="${selectPet.name}">Pet Name</td>
+				<td th:text="${selectPet.breed}">Pet Breed</td>
+				<td th:text="${selectPet.age}">Pet Age</td>
+				<td th:text="${selectPet.getclient().getName()}">Owner's Name</td>
+				
+			</tr>
+		</th:block>
+	</table>
+
+</body>
+</html>

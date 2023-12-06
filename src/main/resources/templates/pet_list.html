@@ -23,18 +23,18 @@
 			<tr class="title">
 				<th>ID	</th>
 				<th>Name	</th>
-				<th>Contact Info	</th>
+				<th>Client Name</th>
 				
 			</tr>
 			<th:block>
-				<tr th:each="currentClient : ${clients}" >
-					<td th:text="${currentClient.id}" />
-					<td th:text="${currentClient.name}" />
-					<td th:text="${currentClient.contactInfo}" />	
+				<tr th:each="currentPet : ${pets}" >
+					<td th:text="${currentPet.id}" />
+					<td th:text="${currentPet.name}" />
+					<td th:text="${currentPet.getclient().getName()}" />	
 				
-					<td ><a th:href="@{/viewclient/{id}(id=${currentClient.id})}">View Details</a></td>
-					<td><a th:href="@{/editClient/{id}(id=${currentClient.id})}">Edit</a></td>
-					<td ><a th:href="@{/deleteClient/{id}(id=${currentClient.id})}">Delete</a></td>
+					<td ><a th:href="@{/viewpet/{id}(id=${currentPet.id})}">View Details</a></td>
+					<td><a th:href="@{/editPet/{id}(id=${currentPet.id})}">Edit</a></td>
+					<td ><a th:href="@{/deletePet/{id}(id=${currentPet.id})}">Delete</a></td>
 				</tr>
 			</th:block>
 		</table>
