@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import dmacc.model.Client;
+import dmacc.model.Pet;
 
 /**
  * @author LILY ELLISON - LBELLISON
@@ -32,6 +33,10 @@ public class PageController {
 			Client c = new Client();
 			model.addAttribute("newClient", c);
 			return "register_client";
+		}else if(theChoice.equals("petR")) {
+			Pet p = new Pet();
+			model.addAttribute("newPet", p);
+			return "register_pet";
 		} else {
 			return "index";
 		}
