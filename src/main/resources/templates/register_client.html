@@ -59,8 +59,22 @@
 			</div>
 		</div>
 	</nav>
-	<h2>These options will be in a drop down "Login" menu:</h2>
+<!--	<h2>These options will be in a drop down "Login" menu:</h2> -->
+	<p>
+	<a href="../viewAllClient">View All Clients</a> <br>
+	<!--Goes to list of pet names to select from using links-->
+	<a href="../viewAllPets">View All Pets</a> <br>
+	<!--Goes to search by pet page, can be used to select pet for editing
+	<a href="../searchPet">Find a Pet</a> <br> -->
+	<!--Goes to search by client page, can be used to select a client for editing-->
+	<a href="/searchClient">Find a Client</a> <br>
+	<!--Goes to insert pet page, can be used to add pet -->
+	<a href="../addPet">Add a Pet</a> <br>
+	<!--Goes to insert client page, can be used to insert a client-->
+	<a href="../addClient">Add a Client</a> <br>
+	</p>
 	<!--Drop Down menu is WIP having some problems with bootstrap atm-->
+	<!--
 	<p>
 	
 	<a href="pickarole?choice=client">Client</a> <br/>
@@ -70,7 +84,7 @@
 	<a href="changepage?choice=contact">Contact Us</a><br>
 	<a href="changepage?choice=register">Register New Client Account</a><br>
     </p>
-	
+	-->
   <form th:object="${newClient}" th:action="@{/newclient/{id}(id=${newClient.id})}" method="post">
 		Name: <input type="text" name="clientName" th:field="*{name}">
 		Contact Info: <input type="text" name="clientContact" th:field="*{contactInfo}">

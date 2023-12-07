@@ -47,6 +47,11 @@ footer {
   padding: 10px;
 }
 
+.img-thumbnail {
+	width: 25%;
+	height: 25%;
+}
+
 tr.title th {
 	padding-inline-start: 25px;
 }
