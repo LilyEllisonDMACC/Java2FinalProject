@@ -4,13 +4,13 @@ header {
   margin: 30px;
   background-color: #5f84A0;
   padding: 35px;
-  outline: 6px solid #A07B5F;
+  outline: 6px solid A07B5F;
   outline-style: inset;
   color: white;
 }
 
 section {
-  background-color: #001514;
+  background-color: #A07B5F;
   padding: 50px 0;
 }
 
@@ -41,6 +41,17 @@ footer {
   color: #fbfffe;
   
 }
+.container2 {
+  padding: 10px;
+  padding-left: 100px;
+  padding-right: 100px;
+  outline-style: inset;
+  text-align: center;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  color: #fbfffe;
+  
+}
 .containerM {
   outline: 6px solid gray;
   outline-style: inset;
@@ -62,6 +73,25 @@ form {
 
 .options {
 	margin-right: 10px;
+}
+
+.services {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+
+.service {
+  margin: 10px;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+h2{
+  text-align: center;
 }
 /*
 [class^='col-md-12'] {
